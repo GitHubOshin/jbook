@@ -27,7 +27,10 @@ const ActionBar: React.FC<ActionBarProps> = ({ id }) => {
       </button>
       <button
         className="button is-primary is-small"
-        onClick={() => moveCell(id)}
+        // BUG: First time this is wrong
+        // onClick={() => moveCell(id)}
+        // FIXED: This is correct
+        onClick={() => deleteCell(id)}
       >
         <span className="icon">
           <i className="fas fa-times"></i>
