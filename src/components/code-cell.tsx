@@ -19,12 +19,12 @@ const CodeCell: React.FC<CellCellProps> = ({ cell }) => {
 
   useEffect(() => {
     if (!bundle) {
-      createBundle(cell.id, cumulativeCode)
+      createBundle(cell.id, cumulativeCode || '')
       return
     }
 
     const timer = setTimeout(async () => {
-      createBundle(cell.id, cumulativeCode)
+      createBundle(cell.id, cumulativeCode || '')
     }, 750) // cell.id, cell.content
 
     return () => {

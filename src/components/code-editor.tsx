@@ -16,7 +16,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
   // }
   const editorRef = useRef<any>()
 
-  const handleEditorChange: OnEditorChange = (value, e) => {
+  const handleEditorChange: OnEditorChange = (value = '', _e) => {
     onChange(value)
   }
 
